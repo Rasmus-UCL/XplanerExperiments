@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="MAIN" Id="{e07fd325-3c50-4170-bed7-3ead63e5f73e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bTestDevice1 : BOOL;  // For Device 1 (EtherCAT)
+    bTestDevice5 : BOOL;  // For Device 5 (USB)
+	mEnable			: 			BOOL;
+	mStart 			:			BOOL;
+	mStop			:			BOOL;
+	mDisable		:			BOOL;
+	mReset			:			BOOL;
+	mCase 			:			UINT;
+	fbMover 		:			MC_PlanarMover;
+	cmdFeedback		:			MC_PlanarFeedback;
+	stMoverState	:			MC_Planar_State;
+	stMoverPos		:			ARRAY[1..5] OF PositionXYC;
+	stPosition		:			PositionXYC;
+	fbDynMove		:			DynamicConstraint_PathXY;
+	fbDynRotate		:			DynamicConstraint_Coordinates;
+	stMoverCoptions	:			ST_MoveCOptions;
+	MovementAreaOID: INT;
+	st_PositionLeave : PositionXYC; 
+	fbEnvironment    : FB_TcIoXPlanarEnvironment; // Håndterer system-miljøet [4]
+	ipXPU : I_TcIoXPlanarProcessingUnit;
+	ipMover : I_TcIoXPlanarMover;
+    //ipXpu            : I_TcIoXPlanarProcessingUnit; // Interface til styreenheden [5]
+    //ipMover          : I_TcIoXPlanarMover; // Interface til den specifikke mover [6]
+	InitializationDone : BOOL;
+	state : UDINT;
+	
+	tryMoverDetectionInfo,tryMoverDetectionSetup,tryLeavingMovementArea,tryEnteringMovementArea:BOOL;
+	stTcIoMoverDetectionInfos :ST_TcIoMoverDetectionInfos;
+	stTcIoMoverDetectionSetup : ST_TcIoMoverDetectionSetup;
+	stEnterOrLeaveMovementAreaParameters: EnterOrLeaveMovementAreaParameters;
+	softStop: BOOL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Initialization();
+
+
+RETURN(NOT InitializationDone);
+ipXPU := fbEnvironment.TcIoXpu(1);
+ipMover := ipXPU.TcIoMover(1);
+
+
+
+IF tryMoverDetectionInfo THEN
+	MoverDetectionInfos();
+	tryMoverDetectionInfo := FALSE;
+END_IF
+
+IF tryMoverDetectionSetup THEN
+	MoverDetectionSetup();
+	tryMoverDetectionSetup := FALSE;
+END_IF
+
+IF tryLeavingMovementArea THEN
+	LeavingMovementArea();
+END_IF
+IF tryEnteringMovementArea THEN
+	EnterMovementArea();
+END_IF
+
+fbMover.Update();
+cmdFeedback.Update();
+stMoverState := fbMover.MCTOPLC.STD.State;
+
+
+IF mEnable THEN
+	fbMover.Enable(cmdFeedback);
+	mEnable := FALSE;
+END_IF
+
+IF mDisable THEN 
+	fbMover.Disable(cmdFeedback);
+	mDisable := FALSE;
+END_IF
+
+IF mReset THEN
+	fbMover.Reset(cmdFeedback);
+	mCase := 0;
+	mReset  := FALSE;	
+END_IF
+
+IF mStart THEN
+	mCase := 1;
+	mStart := FALSE;
+	softStop := FALSE;
+END_IF
+
+CASE mCase OF
+	0:
+		//  Do Nothing //
+	1:
+		// initiate setup case and movement //
+		 stMoverPos[1].SetValuesXYC(120,120,0);
+		 stMoverPos[2].SetValuesXYC(140,600,0);
+		 stMoverPos[3].SetValuesXYC(120,600,0);
+		 stMoverPos[4].SetValuesXYC(360,120,0);
+		 stMoverPos[5].SetValuesXYC(360,360,0);
+		 fbDynMove.SetValuesVADJ(250,2500,2500,25000);
+		 //fbDynRotate.AddLimit.A := 2500;
+		 stMoverCoptions.additionalTurns := 5;
+		 stMoverCoptions.direction	:= MC_Direction.mcDirectionPositive;
+		mCase := 2;
+	2:
+		fbMover.MoveToPosition(cmdFeedback,stMoverPos[1],fbDynMove,0);
+		mCase := 3;
+		
+	3:
+		IF cmdFeedback.Done THEN
+		
+			mCase := 4;
+				IF softStop THEN
+				mCase := 0;
+			END_IF
+		END_IF
+	
+	4:
+		fbMover.MoveToPosition(cmdFeedback,stMoverPos[2],fbDynMove,0);
+			mCase := 5;
+	5:
+		IF cmdFeedback.Done THEN
+			mCase := 6;
+		END_IF
+	6:
+		fbMover.MoveToPosition(cmdFeedback,stMoverPos[3],fbDynMove,0);
+		mCase := 7;
+	7:
+		IF cmdFeedback.Done THEN
+			mCase := 8;
+		END_IF
+	8:
+		fbMover.MoveToPosition(cmdFeedback,stMoverPos[4],fbDynMove,0);
+		mCase := 9;
+	9:
+		IF cmdFeedback.Done THEN
+			mCase := 10;
+		END_IF
+	10:
+		fbMover.MoveC(cmdFeedback,0,fbDynRotate,stMoverCoptions);
+		mCase := 11;
+	11:
+		IF cmdFeedback.Done THEN 
+			mCase := 12;
+		END_IF
+	12:
+		fbMover.MoveToPosition(cmdFeedback,stMoverPos[5],fbDynMove,0);
+		mCase := 13;
+	13:
+		IF cmdFeedback.Done THEN
+			mCase := 2;
+		END_IF
+		
+
+
+END_CASE
+]]></ST>
+    </Implementation>
+    <Action Name="EnterMovementArea" Id="{bad7bf2a-59fb-4771-940c-4b9b6ce6ed84}">
+      <Implementation>
+        <ST><![CDATA[ stEnterOrLeaveMovementAreaParameters.MovementAreaOID    := 16#01010020; // Set to OTCID of Part-Object
+stEnterOrLeaveMovementAreaParameters.Positions.x         := 120; // approximate x-position     
+stEnterOrLeaveMovementAreaParameters.Positions.y        := 120; // approximate y-position
+
+IF ipMover.SetMovementArea(stEnterOrLeaveMovementAreaParameters) (*AND_THEN SUCCEEDED(stEnterOrLeaveMovementAreaParameters.Result)*) THEN
+     tryEnteringMovementArea:=FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="Initialization" Id="{0a80cb15-9f2f-4ba7-baf4-2eff276673aa}">
+      <Implementation>
+        <ST><![CDATA[CASE State OF
+	0:
+		fbEnvironment.Init(FALSE);
+		State := 10;
+		
+	10:
+		IF fbEnvironment.Init(TRUE) THEN
+			State := 20;
+		END_IF
+	;
+END_CASE
+InitializationDone := (State = 20);]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="LeavingMovementArea" Id="{d70da481-998a-4710-bff5-3c36fc239133}">
+      <Implementation>
+        <ST><![CDATA[stEnterOrLeaveMovementAreaParameters.MovementAreaOID    := 0; // Set to 0 to remove a mover
+stEnterOrLeaveMovementAreaParameters.Positions.x         := 0;      
+stEnterOrLeaveMovementAreaParameters.Positions.y        := 0;
+
+IF ipMover.SetMovementArea(stEnterOrLeaveMovementAreaParameters) (*AND_THEN SUCCEEDED(stEnterOrLeaveMovementAreaParameters.Result)*) THEN
+     tryLeavingMovementArea := FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="MoverDetectionInfos" Id="{d06b011e-3a97-4126-a4dd-887b80d1a09b}">
+      <Implementation>
+        <ST><![CDATA[stTcIoMoverDetectionInfos := ipXPU.GetMoverDetectionInfos();
+]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="MoverDetectionSetup" Id="{06f8689f-6a3b-4915-a61e-08be6c4805f6}">
+      <Implementation>
+        <ST><![CDATA[ipXPU.SetMoverDetectionSetup(1,ADR(stTcIoMoverDetectionSetup));]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="MAIN">
+      <LineId Id="304" Count="4" />
+      <LineId Id="310" Count="0" />
+      <LineId Id="422" Count="0" />
+      <LineId Id="421" Count="0" />
+      <LineId Id="311" Count="4" />
+      <LineId Id="407" Count="3" />
+      <LineId Id="317" Count="0" />
+      <LineId Id="413" Count="2" />
+      <LineId Id="412" Count="0" />
+      <LineId Id="419" Count="1" />
+      <LineId Id="418" Count="0" />
+      <LineId Id="417" Count="0" />
+      <LineId Id="318" Count="23" />
+      <LineId Id="461" Count="0" />
+      <LineId Id="342" Count="22" />
+      <LineId Id="462" Count="0" />
+      <LineId Id="365" Count="0" />
+      <LineId Id="466" Count="1" />
+      <LineId Id="465" Count="0" />
+      <LineId Id="366" Count="40" />
+      <LineId Id="178" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.EnterMovementArea">
+      <LineId Id="2" Count="2" />
+      <LineId Id="6" Count="2" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.Initialization">
+      <LineId Id="2" Count="5" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.LeavingMovementArea">
+      <LineId Id="2" Count="2" />
+      <LineId Id="6" Count="2" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.MoverDetectionInfos">
+      <LineId Id="1" Count="1" />
+    </LineIds>
+    <LineIds Name="MAIN.MoverDetectionSetup">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
