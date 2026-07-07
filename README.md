@@ -50,3 +50,6 @@ Focus areas:
 - Simultaneous state changes
 - Coordination and sequencing logic
 - Alarm 
+
+### Hint 
+If there is connection isues when trying to connect to the PLC and getting the error "ads error 1804(0x70C)" try using the advance connections and then it should connect to the PLC
