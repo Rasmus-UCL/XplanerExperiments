@@ -1,0 +1,1456 @@
+<?xml version="1.0"?>
+<TcEventSources Version="2">
+	<Source>
+		<GUID>{28111931-0002-0000-293C-C477581B1200}</GUID>
+		<Name LcId="1031">APS4322-7000 Drive</Name>
+		<Name LcId="1033">APS4322-7000 Drive</Name>
+		<Event>
+			<Id>5122</Id>
+			<Message LcId="1031"><![CDATA[Übertemperatur-Warnung an Sensor '{0}', Temperatur: {1} °C]]></Message>
+			<Message LcId="1033"><![CDATA[Overtemperature warning at sensor '{0}', temperature: {1} °C]]></Message>
+		</Event>
+		<Event>
+			<Id>5123</Id>
+			<Message LcId="1031"><![CDATA[Übertemperatur-Fehler an Sensor '{0}', Temperatur: {1} °C]]></Message>
+			<Message LcId="1033"><![CDATA[Overtemperature error at sensor '{0}', temperature: {1} °C]]></Message>
+		</Event>
+		<Event>
+			<Id>5124</Id>
+			<Message LcId="1031"><![CDATA[Überstromfehler an Sensor '{0}']]></Message>
+			<Message LcId="1033"><![CDATA[Overcurrent error at sensor '{0}']]></Message>
+		</Event>
+		<Event>
+			<Id>5125</Id>
+			<Message LcId="1031">Überstromfehler-Werte (raw) {0}, {1}, {2}</Message>
+			<Message LcId="1033">Overcurrent error values (raw) {0}, {1}, {2}</Message>
+		</Event>
+		<Event>
+			<Id>5126</Id>
+			<Message LcId="1031">Überstromfehler-Werte {0}, {1}, {2}</Message>
+			<Message LcId="1033">Overcurrent error values {0}, {1}, {2}</Message>
+		</Event>
+		<Event>
+			<Id>5127</Id>
+			<Message LcId="1031">Überstromfehler-Setpoints {0}, {1}, {2}</Message>
+			<Message LcId="1033">Overcurrent error setpoint values {0}, {1}, {2}</Message>
+		</Event>
+		<Event>
+			<Id>16641</Id>
+			<Message LcId="1031">Modul-Übertemperatur</Message>
+			<Message LcId="1033">module overtemperature</Message>
+		</Event>
+		<Event>
+			<Id>16643</Id>
+			<Message LcId="1031">Unterspannung Us/Us nicht angeschlossen</Message>
+			<Message LcId="1033">Undervoltage Us/Us not connected</Message>
+		</Event>
+		<Event>
+			<Id>16650</Id>
+			<Message LcId="1031">Lüfter defekt/Kein Lüfter angeschlossen</Message>
+			<Message LcId="1033">fan not spinning/fan not connected</Message>
+		</Event>
+		<Event>
+			<Id>17425</Id>
+			<Message LcId="1031">Unterspannung DC-Zwischenkreis</Message>
+			<Message LcId="1033">Undervoltage DC-Link</Message>
+		</Event>
+		<Event>
+			<Id>17426</Id>
+			<Message LcId="1031">Überspannung DC-Zwischenkreis</Message>
+			<Message LcId="1033">Overvoltage DC-Link</Message>
+		</Event>
+		<Event>
+			<Id>17439</Id>
+			<Message LcId="1031">Übertemperatur IT-Modell Netzteil</Message>
+			<Message LcId="1033">Overtemperature IT-modell powersupply</Message>
+		</Event>
+		<Event>
+			<Id>33028</Id>
+			<Message LcId="1031">Modul-Übertemperatur</Message>
+			<Message LcId="1033">module overtemperature</Message>
+		</Event>
+		<Event>
+			<Id>33029</Id>
+			<Message LcId="1031">PD-Watchdog</Message>
+			<Message LcId="1033">PD-Watchdog</Message>
+		</Event>
+		<Event>
+			<Id>33151</Id>
+			<Message LcId="1031">Interner Fehler</Message>
+			<Message LcId="1033">Internal error</Message>
+		</Event>
+		<Event>
+			<Id>33795</Id>
+			<Message LcId="1031">Adc-Fehler</Message>
+			<Message LcId="1033">Adc error</Message>
+		</Event>
+		<Event>
+			<Id>33796</Id>
+			<Message LcId="1031">Überstromfehler</Message>
+			<Message LcId="1033">Overcurrent error</Message>
+		</Event>
+		<Event>
+			<Id>33798</Id>
+			<Message LcId="1031">Unterspannung DC-Zwischenkreis</Message>
+			<Message LcId="1033">Undervoltage DC-Link</Message>
+		</Event>
+		<Event>
+			<Id>33799</Id>
+			<Message LcId="1031">Überspannung DC-Zwischenkreis</Message>
+			<Message LcId="1033">Overvoltage DC-Link</Message>
+		</Event>
+		<Event>
+			<Id>33860</Id>
+			<Message LcId="1031">Übertemperatur IT-modell Netzteil</Message>
+			<Message LcId="1033">Overtemperature IT-modell powersupply</Message>
+		</Event>
+		<Property>
+			<Name>DisplayTxtId</Name>
+			<Value>true</Value>
+		</Property>
+	</Source>
+	<Source>
+		<GUID>{BB2A9999-102E-421A-8D3D-B0660E07B1FE}</GUID>
+		<Name LcId="1033">TcSystemEventClass</Name>
+		<Event>
+			<Id>1</Id>
+			<Message LcId="1031">Interner Fehler.</Message>
+			<Message LcId="1033">Internal error.</Message>
+		</Event>
+		<Event>
+			<Id>2</Id>
+			<Message LcId="1031">Keine Echtzeit.</Message>
+			<Message LcId="1033">No real-time.</Message>
+		</Event>
+		<Event>
+			<Id>3</Id>
+			<Message LcId="1031">Zuweisung gesperrt - Speicherfehler.</Message>
+			<Message LcId="1033">Allocation locked – memory error.</Message>
+		</Event>
+		<Event>
+			<Id>4</Id>
+			<Message LcId="1031">Postfach voll – Es konnte die ADS Nachricht nicht versendet werden. Reduzieren der Anzahl der ADS Nachrichten pro Zyklus bringt Abhilfe.</Message>
+			<Message LcId="1033">Mailbox full – the ADS message could not be sent. Reducing the number of ADS messages per cycle will help.</Message>
+		</Event>
+		<Event>
+			<Id>5</Id>
+			<Message LcId="1031">Falsches HMSG.</Message>
+			<Message LcId="1033">Wrong HMSG.</Message>
+		</Event>
+		<Event>
+			<Id>6</Id>
+			<Message LcId="1031">Ziel-Port nicht gefunden – ADS Server ist nicht gestartet oder erreichbar.</Message>
+			<Message LcId="1033">Target port not found – ADS server is not started or is not reachable.</Message>
+		</Event>
+		<Event>
+			<Id>7</Id>
+			<Message LcId="1033">Target computer not found – AMS route was not found. </Message>
+		</Event>
+		<Event>
+			<Id>8</Id>
+			<Message LcId="1031">Unbekannte Befehl-ID.</Message>
+			<Message LcId="1033">Unknown command ID.</Message>
+		</Event>
+		<Event>
+			<Id>9</Id>
+			<Message LcId="1031">Ungültige Task-ID.</Message>
+			<Message LcId="1033">Invalid task ID.</Message>
+		</Event>
+		<Event>
+			<Id>10</Id>
+			<Message LcId="1031">Kein IO.</Message>
+			<Message LcId="1033">No IO.</Message>
+		</Event>
+		<Event>
+			<Id>11</Id>
+			<Message LcId="1031">Unbekannter AMS-Befehl.</Message>
+			<Message LcId="1033">Unknown AMS command.</Message>
+		</Event>
+		<Event>
+			<Id>12</Id>
+			<Message LcId="1031">Win32 Fehler.</Message>
+			<Message LcId="1033">Win32 error.</Message>
+		</Event>
+		<Event>
+			<Id>13</Id>
+			<Message LcId="1031">Port nicht verbunden.</Message>
+			<Message LcId="1033">Port not connected.</Message>
+		</Event>
+		<Event>
+			<Id>14</Id>
+			<Message LcId="1031">Ungültige AMS-Länge.</Message>
+			<Message LcId="1033">Invalid AMS length.</Message>
+		</Event>
+		<Event>
+			<Id>15</Id>
+			<Message LcId="1031">Ungültige AMS Net ID.</Message>
+			<Message LcId="1033">Invalid AMS Net ID.</Message>
+		</Event>
+		<Event>
+			<Id>16</Id>
+			<Message LcId="1031">Installations-Level ist zu niedrig – TwinCAT 2 Lizenzfehler.</Message>
+			<Message LcId="1033">Low installation level – TwinCAT 2 license error.</Message>
+		</Event>
+		<Event>
+			<Id>17</Id>
+			<Message LcId="1031">Kein Debugging verfügbar.</Message>
+			<Message LcId="1033">No debugging available.</Message>
+		</Event>
+		<Event>
+			<Id>18</Id>
+			<Message LcId="1031">Port deaktiviert – TwinCAT System Service nicht gestartet.</Message>
+			<Message LcId="1033">Port disabled – TwinCAT system service not started.</Message>
+		</Event>
+		<Event>
+			<Id>19</Id>
+			<Message LcId="1031">Port bereits verbunden.</Message>
+			<Message LcId="1033">Port already connected.</Message>
+		</Event>
+		<Event>
+			<Id>20</Id>
+			<Message LcId="1031">AMS Sync Win32 Fehler.</Message>
+			<Message LcId="1033">AMS Sync Win32 error.</Message>
+		</Event>
+		<Event>
+			<Id>21</Id>
+			<Message LcId="1031">AMS Sync Timeout.</Message>
+			<Message LcId="1033">AMS Sync Timeout.</Message>
+		</Event>
+		<Event>
+			<Id>22</Id>
+			<Message LcId="1031">AMS Sync Fehler.</Message>
+			<Message LcId="1033">AMS Sync error.</Message>
+		</Event>
+		<Event>
+			<Id>23</Id>
+			<Message LcId="1031">Keine Index-Map für AMS Sync vorhanden.</Message>
+			<Message LcId="1033">No index map for AMS Sync available.</Message>
+		</Event>
+		<Event>
+			<Id>24</Id>
+			<Message LcId="1031">Ungültiger AMS-Port.</Message>
+			<Message LcId="1033">Invalid AMS port.</Message>
+		</Event>
+		<Event>
+			<Id>25</Id>
+			<Message LcId="1031">Kein Speicher.</Message>
+			<Message LcId="1033">No memory.</Message>
+		</Event>
+		<Event>
+			<Id>26</Id>
+			<Message LcId="1031">TCP Sendefehler.</Message>
+			<Message LcId="1033">TCP send error.</Message>
+		</Event>
+		<Event>
+			<Id>27</Id>
+			<Message LcId="1031">Host nicht erreichbar.</Message>
+			<Message LcId="1033">Host unreachable.</Message>
+		</Event>
+		<Event>
+			<Id>28</Id>
+			<Message LcId="1031">Ungültiges AMS Fragment.</Message>
+			<Message LcId="1033">Invalid AMS fragment.</Message>
+		</Event>
+		<Event>
+			<Id>29</Id>
+			<Message LcId="1031">TLS Sendefehler – Secure ADS Verbindung fehlgeschlagen.</Message>
+			<Message LcId="1033">TLS send error – secure ADS connection failed.</Message>
+		</Event>
+		<Event>
+			<Id>30</Id>
+			<Message LcId="1031">Zugriff Verweigert – Secure ADS Zugriff verweigert.</Message>
+			<Message LcId="1033">Access denied – secure ADS access denied.</Message>
+		</Event>
+	</Source>
+	<Source>
+		<GUID>{7D760066-D373-4A0C-B0F1-328B1620B0F0}</GUID>
+		<Name LcId="1033">TcGeneralAdsEventClass</Name>
+		<Event>
+			<Id>1792</Id>
+			<Message LcId="1031">Allgemeiner Gerätefehler.</Message>
+			<Message LcId="1033">General device error.</Message>
+		</Event>
+		<Event>
+			<Id>1793</Id>
+			<Message LcId="1031">Service wird vom Server nicht unterstützt.</Message>
+			<Message LcId="1033">Service is not supported by the server.</Message>
+		</Event>
+		<Event>
+			<Id>1794</Id>
+			<Message LcId="1031">Ungültige Index-Gruppe.</Message>
+			<Message LcId="1033">Invalid index group.</Message>
+		</Event>
+		<Event>
+			<Id>1795</Id>
+			<Message LcId="1031">Ungültiger Index-Offset.</Message>
+			<Message LcId="1033">Invalid index offset.</Message>
+		</Event>
+		<Event>
+			<Id>1796</Id>
+			<Message LcId="1031">Lesen oder Schreiben ist nicht gestattet.</Message>
+			<Message LcId="1033">Reading or writing is not permitted.</Message>
+		</Event>
+		<Event>
+			<Id>1797</Id>
+			<Message LcId="1031">Parametergröße ist nicht korrekt.</Message>
+			<Message LcId="1033">Parameter size is not correct.</Message>
+		</Event>
+		<Event>
+			<Id>1798</Id>
+			<Message LcId="1031">Ungültige Daten-Werte.</Message>
+			<Message LcId="1033">Invalid data value(s).</Message>
+		</Event>
+		<Event>
+			<Id>1799</Id>
+			<Message LcId="1031">Gerät ist nicht betriebsbereit.</Message>
+			<Message LcId="1033">Device is not ready to operate.</Message>
+		</Event>
+		<Event>
+			<Id>1800</Id>
+			<Message LcId="1031">Gerät ist beschäftigt.</Message>
+			<Message LcId="1033">Device is busy.</Message>
+		</Event>
+		<Event>
+			<Id>1801</Id>
+			<Message LcId="1031">Ungültiger Kontext vom Betriebssystem. Kann durch Verwendung von ADS Bausteinen in unterschiedlichen Tasks auftreten.</Message>
+			<Message LcId="1033">Invalid operating system context. This can result from use of ADS function blocks in different tasks.</Message>
+		</Event>
+		<Event>
+			<Id>1802</Id>
+			<Message LcId="1031">Nicht genügend Speicher.</Message>
+			<Message LcId="1033">Insufficient memory.</Message>
+		</Event>
+		<Event>
+			<Id>1803</Id>
+			<Message LcId="1031">Ungültige Parameter-Werte.</Message>
+			<Message LcId="1033">Invalid parameter value(s).</Message>
+		</Event>
+		<Event>
+			<Id>1804</Id>
+			<Message LcId="1031">Nicht gefunden (Dateien,...).</Message>
+			<Message LcId="1033">Not found (files, ...).</Message>
+		</Event>
+		<Event>
+			<Id>1805</Id>
+			<Message LcId="1031">Syntax-Fehler in Datei oder Befehl.</Message>
+			<Message LcId="1033">Syntax error in file or command.</Message>
+		</Event>
+		<Event>
+			<Id>1806</Id>
+			<Message LcId="1031">Objekte stimmen nicht überein.</Message>
+			<Message LcId="1033">Objects do not match.</Message>
+		</Event>
+		<Event>
+			<Id>1807</Id>
+			<Message LcId="1031">Objekt ist bereits vorhanden.</Message>
+			<Message LcId="1033">Object already exists.</Message>
+		</Event>
+		<Event>
+			<Id>1808</Id>
+			<Message LcId="1031">Symbol nicht gefunden.</Message>
+			<Message LcId="1033">Symbol was not found.</Message>
+		</Event>
+		<Event>
+			<Id>1809</Id>
+			<Message LcId="1031">Symbol-Version ist ungültig. Kann durch einen Online-Change auftreten. Erzeuge einen neuen Handle.</Message>
+			<Message LcId="1033">Invalid symbol version. This can occur due to an online change. Create a new handle.</Message>
+		</Event>
+		<Event>
+			<Id>1810</Id>
+			<Message LcId="1031">Gerät (Server) ist im ungültigen Zustand.</Message>
+			<Message LcId="1033">Device (server) is in invalid state.</Message>
+		</Event>
+		<Event>
+			<Id>1811</Id>
+			<Message LcId="1031">AdsTransMode wird nicht unterstützt.</Message>
+			<Message LcId="1033">AdsTransMode is not supported.</Message>
+		</Event>
+		<Event>
+			<Id>1812</Id>
+			<Message LcId="1031">Notification Handle ist ungültig.</Message>
+			<Message LcId="1033">Notification handle is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1813</Id>
+			<Message LcId="1031">Notification-Client nicht registriert. </Message>
+			<Message LcId="1033">Notification client is not registered.</Message>
+		</Event>
+		<Event>
+			<Id>1814</Id>
+			<Message LcId="1031">Keine weiteren Notification Handles.</Message>
+			<Message LcId="1033">No further notification handles.</Message>
+		</Event>
+		<Event>
+			<Id>1815</Id>
+			<Message LcId="1031">Größe der Notification zu groß.</Message>
+			<Message LcId="1033">Notification size too large.</Message>
+		</Event>
+		<Event>
+			<Id>1816</Id>
+			<Message LcId="1031">Gerät ist nicht initialisiert.</Message>
+			<Message LcId="1033">Device is not initialized.</Message>
+		</Event>
+		<Event>
+			<Id>1817</Id>
+			<Message LcId="1031">Gerät hat einen Timeout.</Message>
+			<Message LcId="1033">Device has a timeout.</Message>
+		</Event>
+		<Event>
+			<Id>1818</Id>
+			<Message LcId="1031">Interface Abfrage fehlgeschlagen.</Message>
+			<Message LcId="1033">Interface query failed.</Message>
+		</Event>
+		<Event>
+			<Id>1819</Id>
+			<Message LcId="1031">Falsches Interface angefordert. </Message>
+			<Message LcId="1033">Wrong interface is requested.</Message>
+		</Event>
+		<Event>
+			<Id>1820</Id>
+			<Message LcId="1031">Class-ID ist ungültig.</Message>
+			<Message LcId="1033">Class ID is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1821</Id>
+			<Message LcId="1031">Object-ID ist ungültig.</Message>
+			<Message LcId="1033">Object ID is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1822</Id>
+			<Message LcId="1031">Anforderung steht aus.</Message>
+			<Message LcId="1033">Request pending.</Message>
+		</Event>
+		<Event>
+			<Id>1823</Id>
+			<Message LcId="1031">Anforderung wird abgebrochen.</Message>
+			<Message LcId="1033">Request is aborted.</Message>
+		</Event>
+		<Event>
+			<Id>1824</Id>
+			<Message LcId="1031">Signal-Warnung.</Message>
+			<Message LcId="1033">Signal warning.</Message>
+		</Event>
+		<Event>
+			<Id>1825</Id>
+			<Message LcId="1031">Ungültiger Array-Index.</Message>
+			<Message LcId="1033">Invalid array index.</Message>
+		</Event>
+		<Event>
+			<Id>1826</Id>
+			<Message LcId="1031">Symbol ist nicht aktiv.</Message>
+			<Message LcId="1033">Symbol is not active.</Message>
+		</Event>
+		<Event>
+			<Id>1827</Id>
+			<Message LcId="1031">Zugriff verweigert.</Message>
+			<Message LcId="1033">Access denied.</Message>
+		</Event>
+		<Event>
+			<Id>1828</Id>
+			<Message LcId="1031">Fehlende Lizenz.</Message>
+			<Message LcId="1033">Missing license.</Message>
+		</Event>
+		<Event>
+			<Id>1829</Id>
+			<Message LcId="1031">Lizenz abgelaufen.</Message>
+			<Message LcId="1033">License is expired.</Message>
+		</Event>
+		<Event>
+			<Id>1830</Id>
+			<Message LcId="1031">Lizenz überschritten.</Message>
+			<Message LcId="1033">License is exceeded.</Message>
+		</Event>
+		<Event>
+			<Id>1831</Id>
+			<Message LcId="1031">Lizenz ungültig.</Message>
+			<Message LcId="1033">License is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1832</Id>
+			<Message LcId="1031">Lizenzproblem: System-ID ist ungültig.</Message>
+			<Message LcId="1033">License problem: System ID is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1833</Id>
+			<Message LcId="1031">Lizenz nicht zeitlich begrenzt.</Message>
+			<Message LcId="1033">License not limited in time.</Message>
+		</Event>
+		<Event>
+			<Id>1834</Id>
+			<Message LcId="1031">Lizenzproblem: Zeitpunkt in der Zukunft.</Message>
+			<Message LcId="1033">License problem: Time in the future.</Message>
+		</Event>
+		<Event>
+			<Id>1835</Id>
+			<Message LcId="1031">Lizenz-Zeitraum ist zu lang.</Message>
+			<Message LcId="1033">License time period is too long.</Message>
+		</Event>
+		<Event>
+			<Id>1836</Id>
+			<Message LcId="1031">Exception beim Systemstart.</Message>
+			<Message LcId="1033">Exception at system startup.</Message>
+		</Event>
+		<Event>
+			<Id>1837</Id>
+			<Message LcId="1031">Lizenz-Datei zweimal gelesen.</Message>
+			<Message LcId="1033">License file is read twice.</Message>
+		</Event>
+		<Event>
+			<Id>1838</Id>
+			<Message LcId="1031">Ungültige Signatur.</Message>
+			<Message LcId="1033">Invalid signature.</Message>
+		</Event>
+		<Event>
+			<Id>1839</Id>
+			<Message LcId="1031">Zertifikat ungültig.</Message>
+			<Message LcId="1033">Invalid certificate.</Message>
+		</Event>
+		<Event>
+			<Id>1840</Id>
+			<Message LcId="1031">Public Key vom OEM nicht bekannt.</Message>
+			<Message LcId="1033">Public key not known from OEM.</Message>
+		</Event>
+		<Event>
+			<Id>1841</Id>
+			<Message LcId="1031">Lizenz nicht gültig für diese System-ID.</Message>
+			<Message LcId="1033">License not valid for this system ID.</Message>
+		</Event>
+		<Event>
+			<Id>1842</Id>
+			<Message LcId="1031">Demo-Lizenz untersagt.</Message>
+			<Message LcId="1033">Demo license prohibited.</Message>
+		</Event>
+		<Event>
+			<Id>1843</Id>
+			<Message LcId="1031">Funktions-ID ungültig.</Message>
+			<Message LcId="1033">Invalid function ID.</Message>
+		</Event>
+		<Event>
+			<Id>1844</Id>
+			<Message LcId="1031">Außerhalb des gültigen Bereiches.</Message>
+			<Message LcId="1033">Outside the valid range.</Message>
+		</Event>
+		<Event>
+			<Id>1845</Id>
+			<Message LcId="1031">Ungültiges Alignment.</Message>
+			<Message LcId="1033">Invalid alignment.</Message>
+		</Event>
+		<Event>
+			<Id>1846</Id>
+			<Message LcId="1031">Ungültiger Plattform Level.</Message>
+			<Message LcId="1033">Invalid platform level.</Message>
+		</Event>
+		<Event>
+			<Id>1847</Id>
+			<Message LcId="1031">Kontext – Weiterleitung zum Passiv-Level.</Message>
+			<Message LcId="1033">Context – forward to passive level.</Message>
+		</Event>
+		<Event>
+			<Id>1848</Id>
+			<Message LcId="1031">Kontext – Weiterleitung zum Dispatch-Level.</Message>
+			<Message LcId="1033">Context – forward to dispatch level.</Message>
+		</Event>
+		<Event>
+			<Id>1849</Id>
+			<Message LcId="1031">Kontext – Weiterleitung zur Echtzeit.</Message>
+			<Message LcId="1033">Context – forward to real-time.</Message>
+		</Event>
+		<Event>
+			<Id>1857</Id>
+			<Message LcId="1031">Dienst enthält einen ungültigen Parameter. </Message>
+			<Message LcId="1033">Service contains an invalid parameter.</Message>
+		</Event>
+		<Event>
+			<Id>1858</Id>
+			<Message LcId="1031">Polling-Liste ist leer.</Message>
+			<Message LcId="1033">Polling list is empty.</Message>
+		</Event>
+		<Event>
+			<Id>1859</Id>
+			<Message LcId="1031">Variablen-Verbindung bereits im Einsatz.</Message>
+			<Message LcId="1033">Variable connection is already in use.</Message>
+		</Event>
+		<Event>
+			<Id>1860</Id>
+			<Message LcId="1031">Die Invoke-ID ist bereits in Benutzung.</Message>
+			<Message LcId="1033">Invoke ID is already in use.</Message>
+		</Event>
+		<Event>
+			<Id>1861</Id>
+			<Message LcId="1031">Timeout ist aufgetreten – Die Gegenstelle antwortet nicht im vorgegebenen ADS Timeout.</Message>
+			<Message LcId="1033">Timeout has occurred – the remote terminal is not responding in the specified ADS timeout.</Message>
+		</Event>
+		<Event>
+			<Id>1862</Id>
+			<Message LcId="1031">Fehler im Win32 Subsystem.</Message>
+			<Message LcId="1033">Error in Win32 subsystem</Message>
+		</Event>
+		<Event>
+			<Id>1863</Id>
+			<Message LcId="1031">Ungültiger Client Timeout-Wert.</Message>
+			<Message LcId="1033">Invalid client timeout value.</Message>
+		</Event>
+		<Event>
+			<Id>1864</Id>
+			<Message LcId="1031">Port nicht geöffnet.</Message>
+			<Message LcId="1033">Port is not open.</Message>
+		</Event>
+		<Event>
+			<Id>1865</Id>
+			<Message LcId="1031">Keine AMS Adresse.</Message>
+			<Message LcId="1033">No AMS address.</Message>
+		</Event>
+		<Event>
+			<Id>1872</Id>
+			<Message LcId="1031">Interner Fehler in Ads-Sync.</Message>
+			<Message LcId="1033">Internal error in Ads sync.</Message>
+		</Event>
+		<Event>
+			<Id>1873</Id>
+			<Message LcId="1031">Überlauf der Hash-Tabelle.</Message>
+			<Message LcId="1033">Hash table overflow.</Message>
+		</Event>
+		<Event>
+			<Id>1874</Id>
+			<Message LcId="1031">Schlüssel in der Hash-Tabelle nicht gefunden.</Message>
+			<Message LcId="1033">Key not found in hash table.</Message>
+		</Event>
+		<Event>
+			<Id>1875</Id>
+			<Message LcId="1031">Keine Symbole im Cache.</Message>
+			<Message LcId="1033">No symbols in the cache.</Message>
+		</Event>
+		<Event>
+			<Id>1876</Id>
+			<Message LcId="1031">Ungültige Antwort erhalten.</Message>
+			<Message LcId="1033">Invalid response received</Message>
+		</Event>
+		<Event>
+			<Id>1877</Id>
+			<Message LcId="1031">Sync Port ist verriegelt.</Message>
+			<Message LcId="1033">Sync port is locked.</Message>
+		</Event>
+	</Source>
+	<Source>
+		<GUID>{E759605A-2341-48FC-9F3F-C8FA405C4B24}</GUID>
+		<Name LcId="1033">TcRouterEventClass</Name>
+		<Event>
+			<Id>1280</Id>
+			<Message LcId="1031">Lockierter Speicher kann nicht zugewiesen werden.</Message>
+			<Message LcId="1033">Locked memory cannot be allocated.</Message>
+		</Event>
+		<Event>
+			<Id>1281</Id>
+			<Message LcId="1031">Die Größe des Routerspeichers konnte nicht geändert werden.</Message>
+			<Message LcId="1033">The router memory size could not be changed.</Message>
+		</Event>
+		<Event>
+			<Id>1282</Id>
+			<Message LcId="1031">Das Postfach hat die maximale Anzahl der möglichen Meldungen erreicht.</Message>
+			<Message LcId="1033">The mailbox has reached the maximum number of possible messages.</Message>
+		</Event>
+		<Event>
+			<Id>1283</Id>
+			<Message LcId="1031">Das Debug Postfach hat die maximale Anzahl der möglichen Meldungen erreicht.</Message>
+			<Message LcId="1033">The debug mailbox has reached the maximum number of possible messages.</Message>
+		</Event>
+		<Event>
+			<Id>1284</Id>
+			<Message LcId="1031">Der Porttyp ist unbekannt.</Message>
+			<Message LcId="1033">The port type is unknown.</Message>
+		</Event>
+		<Event>
+			<Id>1285</Id>
+			<Message LcId="1031">Der TwinCAT Router ist nicht initialisiert.</Message>
+			<Message LcId="1033">TwinCAT Router is not initialised.</Message>
+		</Event>
+		<Event>
+			<Id>1286</Id>
+			<Message LcId="1031">Die Portnummer ist bereits vergeben.</Message>
+			<Message LcId="1033">The port number is already assigned.</Message>
+		</Event>
+		<Event>
+			<Id>1287</Id>
+			<Message LcId="1031">Der Port ist nicht registriert.</Message>
+			<Message LcId="1033">The port is not registered.</Message>
+		</Event>
+		<Event>
+			<Id>1288</Id>
+			<Message LcId="1031">Die maximale Portanzahl ist erreicht.</Message>
+			<Message LcId="1033">The maximum number of ports has been reached.</Message>
+		</Event>
+		<Event>
+			<Id>1289</Id>
+			<Message LcId="1031">Der Port ist ungültig.</Message>
+			<Message LcId="1033">The port is invalid.</Message>
+		</Event>
+		<Event>
+			<Id>1290</Id>
+			<Message LcId="1031">Der TwinCAT Router ist nicht aktiv.</Message>
+			<Message LcId="1033">TwinCAT Router is not active.</Message>
+		</Event>
+		<Event>
+			<Id>1291</Id>
+			<Message LcId="1031">Das Postfach hat die maximale Anzahl für fragmentierte Nachrichten erreicht.</Message>
+			<Message LcId="1033">The mailbox has reached the maximum number for fragmented messages.</Message>
+		</Event>
+		<Event>
+			<Id>1292</Id>
+			<Message LcId="1031">Fragment Timeout aufgetreten.</Message>
+			<Message LcId="1033">A fragment timeout has occurred.</Message>
+		</Event>
+		<Event>
+			<Id>1293</Id>
+			<Message LcId="1031">Port wird entfernt.</Message>
+			<Message LcId="1033">The port is removed.</Message>
+		</Event>
+	</Source>
+	<Source>
+		<GUID>{04088002-5304-4E2D-8C63-70EC5DFD92D4}</GUID>
+		<Name LcId="1033">XPlanarUtilityEvents</Name>
+		<Event>
+			<Id>#x11000001</Id>
+			<Message LcId="1033">Error acknowledged!</Message>
+		</Event>
+		<Event>
+			<Id>#x21000001</Id>
+			<Message LcId="1033">XPlanar driver version ({0}.{1}.{2}.{3}) is not matching with Tc3_XplanarUtility ({4}.{5}.{6}.{7}) Plc-Library! Some functions may not work properly...</Message>
+		</Event>
+		<Event>
+			<Id>#x3100001</Id>
+			<Message LcId="1033">General Error</Message>
+		</Event>
+		<Event>
+			<Id>#x31000002</Id>
+			<Message LcId="1033">Index out of Bounds! Object is not existing or not initialized...</Message>
+		</Event>
+		<Event>
+			<Id>#x31000003</Id>
+			<Message LcId="1033">Command rejected! Empty interface would have been used ...</Message>
+		</Event>
+		<Event>
+			<Id>#x31000004</Id>
+			<Message LcId="1033">Invalid OTCID (0x{0,X})</Message>
+		</Event>
+		<Event>
+			<Id>#x31001001</Id>
+			<Message LcId="1033"><![CDATA[More Xplanar Xpus({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31001002</Id>
+			<Message LcId="1033"><![CDATA[More Tracks({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31001003</Id>
+			<Message LcId="1033"><![CDATA[More Groups({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31001004</Id>
+			<Message LcId="1033"><![CDATA[More Environments({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31001005</Id>
+			<Message LcId="1033">Initialization of Xpu {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31001006</Id>
+			<Message LcId="1033">Initialization of Track {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31001007</Id>
+			<Message LcId="1033">Initialization of Group {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31001008</Id>
+			<Message LcId="1033">Initialization of MC-Environment {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31001009</Id>
+			<Message LcId="1033"><![CDATA[More McMover({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>822087690</Id>
+			<Message LcId="1033">Initialization of McMover {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31002001</Id>
+			<Message LcId="1033"><![CDATA[More Parts({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002002</Id>
+			<Message LcId="1033"><![CDATA[More Tiles({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002003</Id>
+			<Message LcId="1033"><![CDATA[More Mover({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002004</Id>
+			<Message LcId="1033"><![CDATA[More MoverCouplings({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002005</Id>
+			<Message LcId="1033"><![CDATA[More MovementAreas({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002006</Id>
+			<Message LcId="1033"><![CDATA[More ParametrizationSets({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31002007</Id>
+			<Message LcId="1033">Initialization of Part {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31002008</Id>
+			<Message LcId="1033">Initialization of MovementArea {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x31002009</Id>
+			<Message LcId="1033">Initialization of Tile {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100200A</Id>
+			<Message LcId="1033">Initialization of Mover {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100200B</Id>
+			<Message LcId="1033">Initialization of ParametrizationSet {0} failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100200C</Id>
+			<Message LcId="1033"><![CDATA[More ExtFeedbackParametrizationSets({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x3100200D</Id>
+			<Message LcId="1033"><![CDATA[More PeerObjects({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x31006001</Id>
+			<Message LcId="1033">This tile type has no subdevices!</Message>
+		</Event>
+		<Event>
+			<Id>#x31006002</Id>
+			<Message LcId="1033"><![CDATA[More SubDevices({0}) found than parameterized in "Param_TcIoXPlanarEnvironment"!]]></Message>
+		</Event>
+		<Event>
+			<Id>#x3100C001</Id>
+			<Message LcId="1033">Registration of FB_ExternalFeedback failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100C002</Id>
+			<Message LcId="1033">Assignment of ExternalFeedbackParametrizationSet failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100C003</Id>
+			<Message LcId="1033">Disabling of external feedback failed!</Message>
+		</Event>
+		<Event>
+			<Id>#x3100C004</Id>
+			<Message LcId="1033">Enabling of external feedback failed!</Message>
+		</Event>
+	</Source>
+	<Source>
+		<GUID>{6C34213D-7B99-4E3A-8469-7FAF392B2C1C}</GUID>
+		<Name LcId="1033">XPlanarEvents</Name>
+		<Event>
+			<Id>#x13170000</Id>
+			<Message LcId="1033">Writing dump file: {0}</Message>
+		</Event>
+		<Event>
+			<Id>#x13170001</Id>
+			<Message LcId="1033">Mover redetection started</Message>
+		</Event>
+		<Event>
+			<Id>#x13170005</Id>
+			<Message LcId="1033">Determined target with SystemID: {0}</Message>
+		</Event>
+		<Event>
+			<Id>#x13170006</Id>
+			<Message LcId="1033">Reconnected to target</Message>
+		</Event>
+		<Event>
+			<Id>#x13170007</Id>
+			<Message LcId="1033">Coordinated mover communication started to identify and find all configured movers.</Message>
+		</Event>
+		<Event>
+			<Id>#x13170008</Id>
+			<Message LcId="1033">Coordinated mover communication finished.</Message>
+		</Event>
+		<Event>
+			<Id>#x13170009</Id>
+			<Message LcId="1033"><![CDATA[BTN '{0}' was found at position {1}/{2} and assigned to mover object 0x{3,X}.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x1317000A</Id>
+			<Message LcId="1033">Mover with object ID 0x{0,X} was removed from the system.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317000B</Id>
+			<Message LcId="1033">Coordinated mover communication started to identify and assign movers if possible.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317000C</Id>
+			<Message LcId="1033">Coordinated mover communication started to read BTN of all movers.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317000D</Id>
+			<Message LcId="1033">Coordinated mover communication started to determine orientations of all movers.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317000E</Id>
+			<Message LcId="1033">Coordinated mover communication started to determine orientations of all movers without turning.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317000F</Id>
+			<Message LcId="1033">Preparing movers for communication.</Message>
+		</Event>
+		<Event>
+			<Id>#x13170010</Id>
+			<Message LcId="1033">Communication in progress...</Message>
+		</Event>
+		<Event>
+			<Id>#x13170011</Id>
+			<Message LcId="1033">Rearrange movers.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175000</Id>
+			<Message LcId="1033">Determined NC cycle time: {0} s</Message>
+		</Event>
+		<Event>
+			<Id>#x13175001</Id>
+			<Message LcId="1033">Mover communication started.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175002</Id>
+			<Message LcId="1033">Mover communication finished successfully.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175003</Id>
+			<Message LcId="1033">Mover orientation determination started.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175004</Id>
+			<Message LcId="1033">Mover orientation determination finished successfully.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175005</Id>
+			<Message LcId="1033">Mover file transfer started.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175006</Id>
+			<Message LcId="1033">Mover file transfer finished successfully.</Message>
+		</Event>
+		<Event>
+			<Id>#x13175007</Id>
+			<Message LcId="1033">Requested mover submission to Mover-OID 0x{0,X} of system {1}</Message>
+		</Event>
+		<Event>
+			<Id>#x13175008</Id>
+			<Message LcId="1033">Took control of arriving mover</Message>
+		</Event>
+		<Event>
+			<Id>#x13175009</Id>
+			<Message LcId="1033">Control handed over to adoption system</Message>
+		</Event>
+		<Event>
+			<Id>#x1317500A</Id>
+			<Message LcId="1033">Mover submission initiated</Message>
+		</Event>
+		<Event>
+			<Id>#x1317500B</Id>
+			<Message LcId="1033">Mover adoption initiated for Mover-OID 0x{0,X} of system {1}</Message>
+		</Event>
+		<Event>
+			<Id>#x1317500C</Id>
+			<Message LcId="1033">Finished mover submission</Message>
+		</Event>
+		<Event>
+			<Id>#x1317500E</Id>
+			<Message LcId="1033">Mover detectec at TransferArea. Enable mover transfer for feedback update.</Message>
+		</Event>
+		<Event>
+			<Id>#x1317500D</Id>
+			<Message LcId="1033">Mover adoption is done</Message>
+		</Event>
+		<Event>
+			<Id>#x1317B007</Id>
+			<Message LcId="1033">Mover-OID 0x{0,X} from system {1} requested mover adoption by Mover-OID 0x{2,X}</Message>
+		</Event>
+		<Event>
+			<Id>#x23175000</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] Defined parametrization set could not be found. Hence, parameters haven't been changed.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x23175001</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Implausible mover position. Mover was removed from current movement area.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175002</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid basic inertia. Basic inertia is set to standard inertia (plain mover).</Message>
+		</Event>
+		<Event>
+			<Id>#x23175003</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid payload inertia. Payload inertia is set to zero.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175009</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid mover feedback. Mover was removed from current movement area.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317500C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid controller parameters of axis {1}. Controller parameters are set to default.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317500D</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid feedforward parameters of axis {1}. Feedforward parameters are set to default.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317500E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid observer parameters of axis {1}. Observer parameters are set to default.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175010</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Canceling Mover transfer not possible. Relevant data is currently exchanged.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175012</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Failed to retrieve external feedback interface. Check the external feedback OID parameter is correct.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175013</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid external feedback observer parameters of axis {1}. Observer parameters are set to default.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175014</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] There is either no payload on the mover to be detected or the payload is too light (less than 0.1 kg).</Message>
+		</Event>
+		<Event>
+			<Id>#x23175015</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] During payload identification process the force or power limits by the tile were exceeded and the result would be meaningless.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175016</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Position offset out of allowed range ({1} axis)</Message>
+		</Event>
+		<Event>
+			<Id>#x23175018</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Defined external feedback parametrization set could not be found.</Message>
+		</Event>
+		<Event>
+			<Id>#x23175019</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid Kalman filter parameters of axis {1}. Kalman filter parameters are set to default.</Message>
+		</Event>
+		<Event>
+			<Id>#x23176002</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Tile hardware warning (Value of CoE register 0x81430: 0x{1,X}).</Message>
+		</Event>
+		<Event>
+			<Id>#x23176003</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] FB Inputs have not changed since last cycle.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317A001</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Enabling time invalid. Must be between 0.1 s and 4.0 s.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317A002</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Disabling time invalid. Must be between 0.1 s and 4.0 s.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317A003</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Enabling height invalid. Must be between 0.5 mm and 5.0 mm.</Message>
+		</Event>
+		<Event>
+			<Id>#x2317B002</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Connection has been interrupted</Message>
+		</Event>
+		<Event>
+			<Id>#x3317001C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] No free capacity</Message>
+		</Event>
+		<Event>
+			<Id>#x3317001D</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Reconnected system (System ID: {1}) is not the same as the initially connected system (System ID: {2})</Message>
+		</Event>
+		<Event>
+			<Id>#x33170023</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Preparation of adoption system failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170024</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not create multicomputing command (HRESULT: 0x{1,X}).</Message>
+		</Event>
+		<Event>
+			<Id>#x33170025</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Submission setup failed (HRESULT: 0x{1,X}).</Message>
+		</Event>
+		<Event>
+			<Id>#x33170026</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not reserve mover for system transfer.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170027</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not finish mover adoption.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170028</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Target system reported an error. Communication has been terminated.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170029</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not process all responses ({1} of {2})</Message>
+		</Event>
+		<Event>
+			<Id>#x3317002B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover 0x{1,X} is not able to identify.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317002C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] {1} mover(s) have an error, e.g. mover 0x{2,X}. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317002D</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] The configured BTN '{1}' was not identified on the system.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x3317002E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Coordinated mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170035</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Wrong mover type. Mover 0x{1,X} is a mover type that cannot communicate.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317003C</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] BTN '{1}' was identified multiple times.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x3317003D</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] {1} tile(s) have an invalid firmware version, e.g. tile 0x{2,X}. Firmware must be at least version 4. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317003E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] DC link voltage of {1} tile(s) is not ok, e.g. tile 0x{2,X}. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317003F</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Part 0x{1,X} has an error. {2} tiles of this part have an error. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170040</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] {1} mover(s) are activated, e.g. mover 0x{2,X}. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33170044</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] Identified BTN '{1}' is not configured.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x3317004B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] No movers were found on the system. Coordinated mover communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317004C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Wrong mover type. Mover 0x{1,X} is a mover type which orientation cannot be determined yet.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317004D</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Preparation for mover communication of mover 0x{1,X} failed. Coordinated mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317004E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover communication of mover 0x{1,X} failed. Coordinated mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317004F</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] The determined orientation of mover 0x{1,X} is uncertain. Coordinated mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33172000</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Peers with the same target musst be assigned to the same task</Message>
+		</Event>
+		<Event>
+			<Id>#x33175001</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not reach defined start height</Message>
+		</Event>
+		<Event>
+			<Id>#x33175007</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Initialization failed</Message>
+		</Event>
+		<Event>
+			<Id>#x33175008</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Actual position is outside of movement area. Initiating mover stop</Message>
+		</Event>
+		<Event>
+			<Id>#x33175009</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] NC mapping error</Message>
+		</Event>
+		<Event>
+			<Id>#x3317500A</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Feedback error</Message>
+		</Event>
+		<Event>
+			<Id>#x3317500B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not determine NC cycle time. Initiating mover stop</Message>
+		</Event>
+		<Event>
+			<Id>#x3317500C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Position setpoints are unreachable (axis = {1}; position setpoint = {2,f}; actual position = {3,f}). Initiating mover stop</Message>
+		</Event>
+		<Event>
+			<Id>#x3317500F</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not enter movement area</Message>
+		</Event>
+		<Event>
+			<Id>#x33175010</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Observer error. Invalid observer parameters seem to be configured.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175011</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is rotated. Enabling is not possible.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175012</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Maximum force limit parameters exceed the maximum limit. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175013</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Minimum force limit parameters exceed the maximum limit. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175014</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Minimum force limit parameters are greater than the maximum force parameters. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175015</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Maximum force limit parameters are below zero. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175016</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Minimum force limit parameters are below zero. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175017</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Maximum force limit parameters are equal to zero in at least 1 DOF. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175018</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Minimum force limit parameters are equal to zero in at least 1 DOF. Parameters stay the same.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317501A</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] C setpoint is unreachable at this position. Initiating mover stop.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317501B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] No rotation feedback available. Initiating mover stop.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317501D</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is not assigned to any movement area. Enabling is not possible.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317501F</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is not allowed to leave movement area when it is activated. Disable mover first!</Message>
+		</Event>
+		<Event>
+			<Id>#x33175022</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Commanded Part OID from NC (0x{1,X}) not found.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175023</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is on part with error. Switching into error state.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175024</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover uses deactivated part. Switching into error state.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175026</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover cannot enable because the part and the tiles could not be enabled. Switching into error state.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175027</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover has an error. Communication attempt is aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175028</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Invalid tile firmware. Firmware version must at least be 4. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175029</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Tile DC link voltage too low. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317502A</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] System could not be switched on. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317502B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317502C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover file transfer failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317502E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover cannot be reset because part does not reset.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175030</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover orientation determination failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175031</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] One or more Parts used by the mover have an error. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175032</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover communication not possible. Either no ID bumper is configured or the configured mover type does not allow communication.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175033</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is activated. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175034</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Determined mover orientation is uncertain.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175035</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover cannot be reenabled right now because the current NC setpoints are out of range.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175036</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not cancel mover transfer</Message>
+		</Event>
+		<Event>
+			<Id>#x33175037</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Finishing mover submission failed</Message>
+		</Event>
+		<Event>
+			<Id>#x33175038</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not finish mover adoption</Message>
+		</Event>
+		<Event>
+			<Id>#x33175039</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Removed Mover from movement area due to lost EtherCAT connection of one or more used Tiles</Message>
+		</Event>
+		<Event>
+			<Id>#x3317503A</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] External feedback deviation too large on axis {1}.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175041</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is between to XPlanar systems and mover transfer is not activated. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175042</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover bumper exceeds the tile area. Mover orientation cannot be determined.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175043</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] Wrong mover firmware, firmware must be >= 4. Mover orientation cannot be determined.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x33175044</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Transmission of the message to the mover failed. Mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175045</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Reception of the message from the mover failed. Mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175046</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Decoding of the message from the mover failed. Mover communication failed.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175047</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mover is rotated and cannot be orientated. Communication aborted.</Message>
+		</Event>
+		<Event>
+			<Id>#x33175100</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] In TwinCAT Measurement Bode Plot an NC2 axis has been chosen to be measured that was previously not linked in the mover tmc.</Message>
+		</Event>
+		<Event>
+			<Id>#x33176002</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] EtherCAT communication is lost. System is shut down.</Message>
+		</Event>
+		<Event>
+			<Id>#x33176004</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Power supply temperature ({1,f} °C) exceeds the limit of {2,f} °C. System is shut down.</Message>
+		</Event>
+		<Event>
+			<Id>#x33176005</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Tile temperature {1} ({2,f} °C) exceeds the limit of {3,f} °C. System is shut down.</Message>
+		</Event>
+		<Event>
+			<Id>#x33176007</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Hardware error</Message>
+		</Event>
+		<Event>
+			<Id>#x3317600B</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Could not reset Tile</Message>
+		</Event>
+		<Event>
+			<Id>#x3317600C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Underrun DC-Link voltage threshold</Message>
+		</Event>
+		<Event>
+			<Id>#x33178006</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] One tile of this part has an error. The part, its tiles and its movers are shutting down.</Message>
+		</Event>
+		<Event>
+			<Id>#x33178009</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Part detection is not possible when the Part is combined with other Parts.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179008</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Submovers are in different movement areas.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317900E</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Mismatch of Submovers positions.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179100</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] Software coupling cannot be initialized. Check parameters and movers' positions.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x33179101</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] Submover has an error in software coupling.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179102</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] No memory can be assigned the software coupling.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179103</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] The number of submovers is not supported for the coupling.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179104</Id>
+			<Message LcId="1033"><![CDATA[[Event ID: 0x{0,X}] The submover's control is off.]]></Message>
+		</Event>
+		<Event>
+			<Id>#x33179105</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] The setpoints for the software coupling are invalid.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179106</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] One of submovers touch the power limit, and the coupling is disabled.</Message>
+		</Event>
+		<Event>
+			<Id>#x33179108</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] The active index is not available.</Message>
+		</Event>
+		<Event>
+			<Id>#x3317B01C</Id>
+			<Message LcId="1033">[Event ID: 0x{0,X}] No free transfer variables left. Please check configuration of XPlanarPeer.</Message>
+		</Event>
+		<Detail>
+			<Name>Comment</Name>
+			<Text LcId="1033">Manages all XPlanar event logger messages</Text>
+		</Detail>
+	</Source>
+</TcEventSources>

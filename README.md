@@ -13,6 +13,11 @@ The project is used to explore and document practical and research-oriented XPla
 
 The repository acts as both a technical playground and a documentation base for structured experimentation [file:1].
 
+## Librarys for twin cat
+- XPlanar Utility Library
+- TF5430 | TwinCAT 3 Planar Motion
+- TF5890 |TwinCAT 3 Xplanar
+
 ## Initial Research Focus
 
 The first phase of this repository investigates the following questions:
@@ -45,3 +50,6 @@ Focus areas:
 - Simultaneous state changes
 - Coordination and sequencing logic
 - Alarm 
+
+### Hint 
+If there is connection isues when trying to connect to the PLC and getting the error "ads error 1804(0x70C)" try using the advance connections and then it should connect to the PLC
