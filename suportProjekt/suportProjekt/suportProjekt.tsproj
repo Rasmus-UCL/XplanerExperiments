@@ -4025,7 +4025,7 @@
 				<Group><![CDATA[Maximum Dynamics]]></Group>
 				<Group><![CDATA[Default Dynamics]]></Group>
 				<Group Collapsed="true"><![CDATA[On Track Dynamics]]></Group>
-				<Group Collapsed="true"><![CDATA[Monitoring]]></Group>
+				<Group><![CDATA[Monitoring]]></Group>
 				<Group><![CDATA[Command Sequencer]]></Group>
 				<Group><![CDATA[Command mode on track]]></Group>
 				<Group Collapsed="true"><![CDATA[Internal]]></Group>
@@ -17210,7 +17210,7 @@
 								<Group><![CDATA[Methods]]></Group>
 								<Group Collapsed="true"><![CDATA[Feedback]]></Group>
 								<Group Collapsed="true"><![CDATA[PositionOffset]]></Group>
-								<Group Collapsed="true"><![CDATA[ExternalFeedback]]></Group>
+								<Group><![CDATA[ExternalFeedback]]></Group>
 								<Group Collapsed="true"><![CDATA[MoverCommunication]]></Group>
 								<Group Collapsed="true"><![CDATA[MoverCommunicationStatus]]></Group>
 								<Group Collapsed="true"><![CDATA[MoverCommunicationData]]></Group>
@@ -17554,7 +17554,7 @@
 									<PTCID>#x0317502e</PTCID>
 									<ContextId>1</ContextId>
 								</Parameter>
-								<Parameter OnlineParameter="true" DisableCodeGeneration="true" ReadOnly="true" Group="General">
+								<Parameter OnlineParameter="true" DisableCodeGeneration="true" ShowSubItems="true" ReadOnly="true" Group="General">
 									<Name>ActualPositions</Name>
 									<Comment><![CDATA[Actual positions, part and movement area OIDs]]></Comment>
 									<BitSize>448</BitSize>
@@ -17923,7 +17923,7 @@
 							</Parameters>
 							<DataAreas>
 								<DataArea>
-									<AreaNo AreaType="Internal" CreateSymbols="true">1</AreaNo>
+									<AreaNo AreaType="Internal" CreateSymbols="true" ShowSymbols="true">1</AreaNo>
 									<Name>Scope</Name>
 									<ContextId>1</ContextId>
 									<ByteSize>872</ByteSize>
@@ -17935,7 +17935,7 @@
 									</Symbol>
 								</DataArea>
 								<DataArea>
-									<AreaNo AreaType="InputDst" CreateSymbols="true">3</AreaNo>
+									<AreaNo AreaType="InputDst" CreateSymbols="true" ShowSymbols="true">3</AreaNo>
 									<Name>InputsFromNC3</Name>
 									<ContextId>1</ContextId>
 									<ByteSize X64="#x8">4</ByteSize>
@@ -17958,7 +17958,7 @@
 									</Properties>
 								</DataArea>
 								<DataArea>
-									<AreaNo AreaType="OutputSrc" CreateSymbols="true">4</AreaNo>
+									<AreaNo AreaType="OutputSrc" CreateSymbols="true" ShowSymbols="true">4</AreaNo>
 									<Name>OutputsToNC3</Name>
 									<ContextId>1</ContextId>
 									<ByteSize X64="#x8">4</ByteSize>
@@ -19766,7 +19766,7 @@
 		</Motion>
 		<Plc>
 			<Project GUID="{C2ACF961-46C6-4423-AC28-C4A4BF87BA9F}" Name="Untitled1" PrjFilePath="Untitled1\Untitled1.plcproj" TmcFilePath="Untitled1\Untitled1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Untitled1\Untitled1.tmc" TmcHash="{1F2AE703-1C2D-2DB0-03CD-0E0E89D750F2}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Untitled1\Untitled1.tmc" TmcHash="{C9EAC846-A3D8-C9A1-206A-D1DFC32D354A}">
 					<Name>Untitled1 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
